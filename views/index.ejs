@@ -8,8 +8,16 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="login">
+    <a href="<%='/login' %>"><button class="login"> Login </button> </a>
+    </div>
+    <div class="register">
+      <a href="<%='/login' %>"><button class="register"> Register </button></a>
+    </div>
+
+    <p> <%= slogan %></p>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="/reload/reload.js"></script>
   </body>
 </html>

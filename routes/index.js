@@ -6,7 +6,10 @@ var models = require('../db/models/index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', {
+    title: 'Remindr',
+    slogan: 'Never waste an wasted moment'
+  });
 });
 
 // Route to the register page
