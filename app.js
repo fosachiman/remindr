@@ -4,11 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var env = require('dotenv').config();
 var methodOverride = require('method-override');
 
 const session = require('express-session');
 const passport = require('passport');
+require('dotenv').config();
 
 var app = express();
 
