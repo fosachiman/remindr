@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Categories = sequelize.define('Categories', {
-    user_id: DataTypes.INTEGER,
+    category_id: DataTypes.INTEGER,
     category: DataTypes.STRING(255)
   }, {
     classMethods: {
