@@ -4,11 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var env = require('dotenv').config();
 var methodOverride = require('method-override');
 
 const session = require('express-session');
 const passport = require('passport');
-require('dotenv').config();
+
+
 
 var app = express();
 
@@ -16,6 +18,8 @@ var app = express();
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+const userRoutes = require('./routes/users.js')
+const authRoutes = require('./routes/auth.js');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -46,6 +50,7 @@ app.use(methodOverride('_method'));
 //ROUTES
 app.use('/', index);
 app.use('/users', users);
+app.use('/auth', authRoutes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

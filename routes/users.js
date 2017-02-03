@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var models = require('../db/models/index'); // importing the model
 
+//FIGURE OUT WHERE EACH OF THESE ARE GOING
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('users',{
@@ -9,6 +11,15 @@ router.get('/', function(req, res, next) {
     // categories:req.usercategories.datavalues,
     // items:req.user.datavalues,
     title: 'Remindr',
+var authHelpers = require('../auth/auth-helper');
+})
+})
+
+
+/* GET users listing. */
+router.get('/', authHelpers.loginRequired, function(req, res, next) {
+  res.render('user/index', {
+    user: req.user.dataValues
   });
 });
 
