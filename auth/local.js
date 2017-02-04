@@ -12,7 +12,7 @@ init();
 passport.use(new LocalStrategy(options, (email, password, done) => {
   models.Users.findOne({
     where: {
-      email: email
+      email
     }
   }).then((user) => {
     console.log('USER:' + user);
@@ -20,6 +20,7 @@ passport.use(new LocalStrategy(options, (email, password, done) => {
       return done(null, false);
     }
     if (!authHelpers.comparePass(password, user.dataValues.password)) {
+      console.log("THIS IS WHERE IT SHOULD BE");
       return done(null, false);
     } else {
       return done(null, user.dataValues);
