@@ -10,25 +10,27 @@ const options = {};
 init();
 
 passport.use(new LocalStrategy({
-    usernameField: 'email'},
-     (username, password, done) => {
-  models.Users.findOne({
-    where: {
-      email: username
-    }
-  }).then((user) => {
-    console.log('USER:' + user);
-    if (!user) {
-      return done(null, false);
-    }
-    if (!authHelpers.comparePass(password, user.dataValues.password)) {
-      console.log("THIS IS WHERE IT SHOULD BE");
-      return done(null, false);
-    } else {
-      return done(null, user.dataValues);
-    }
-  })
-  .catch((err) => { return done(err); });
-}));
+        usernameField: 'email'
+    },
+    (username, password, done) => {
+        models.Users.findOne({
+                where: {
+                    email: username
+                }
+            }).then((user) => {
+                console.log('USER:' + user);
+                if (!user) {
+                    return done(null, false);
+                }
+                if (!authHelpers.comparePass(password, user.dataValues.password)) {
+                    console.log("THIS IS WHERE IT SHOULD BE");
+                    return done(null, false);
+                } else {
+                    return done(null, user.dataValues);
+                }
+            })
+            .catch((err) => {
+                return done(err); });
+    }));
 
 module.exports = passport;
