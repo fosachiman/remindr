@@ -9,13 +9,13 @@ const options = {};
 
 init();
 
-passport.use(new LocalStrategy(options, (username, password) => {
+passport.use(new LocalStrategy(options, (email, password, done) => {
   models.Users.findOne({
     where: {
-      username
+      email: email
     }
   }).then((user)=> {
-    console.log(user);
+    console.log('USER:' + user);
     if (!user) {
       return done(null, false);
     }
