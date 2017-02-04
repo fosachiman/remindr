@@ -18,10 +18,8 @@ router.get('/register', (req, res, next) => {
 
 // Post data from the register form to the database, both the user and categories
 router.post('/register', regHelper.createUser, regHelper.createCategories, (req, res, next)  => {
-
-  // .then(() => {
-  res.redirect('/');
-  // .catch((err) => { res.status(500).json({ status: err }); });
+    res.redirect('/')
 });
+
 
 module.exports = router;

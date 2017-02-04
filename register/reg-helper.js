@@ -15,15 +15,13 @@ function createUser(req, res, next) {
 }
 
 function createCategories(req, res, next) {
-  // console.log(register);
-  console.log(req);
   let arr = Object.keys(req.body);
   let categories = arr.filter((category) => {
     return (category != "name" && category != "email" && category != "password");
   });
-  categories.forEach((category) => {
-    models.Categories.create({
-      user_id: res.dataValues.id,
+   categories.forEach((category) => {
+   models.Categories.create({
+      email: req.body.email,
       category: category
     });
   });
