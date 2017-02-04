@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var models = require('../db/models/index'); // importing the model
 
+var authHelpers = require('../auth/auth-helper');
+
 //FIGURE OUT WHERE EACH OF THESE ARE GOING
 
 /* GET users listing. */
@@ -11,7 +13,6 @@ router.get('/', function(req, res, next) {
     // categories:req.usercategories.datavalues,
     // items:req.user.datavalues,
     title: 'Remindr',
-var authHelpers = require('../auth/auth-helper');
 })
 })
 
