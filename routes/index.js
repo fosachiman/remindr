@@ -17,8 +17,15 @@ router.get('/register', (req, res, next) => {
 });
 
 // Post data from the register form to the database, both the user and categories
-router.post('/register', regHelper.createUser, regHelper.createCategories, (req, res, next)  => {
-    res.redirect('/')
+router.post('/register', regHelper.createCategories, (req, res, next)  => {
+    regHelper.createUser(req, res)
+    .then((user) => {
+    req.login(user, (err) => {
+      if (err) return next(err);
+      res.redirect('/users/:id');
+    });
+  })
+  .catch((err) => { res.status(500).json({ status: 'error' }); });
 });
 
 

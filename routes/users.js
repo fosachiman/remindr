@@ -7,7 +7,7 @@ var authHelpers = require('../auth/auth-helper');
 //FIGURE OUT WHERE EACH OF THESE ARE GOING
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/:id', function(req, res, next) {
   res.render('users',{
     // user:req.user.datavalues,
     // categories:req.usercategories.datavalues,

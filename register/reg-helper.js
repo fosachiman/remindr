@@ -6,12 +6,11 @@ function createUser(req, res, next) {
   const salt = bcrypt.genSaltSync();
   const hash = bcrypt.hashSync(req.body.password, salt);
   // return
-  models.Users.create({
+  return models.Users.create({
     email: req.body.email,
     password: hash,
     name: req.body.name
   });
-  next();
 }
 
 function createCategories(req, res, next) {
