@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        Items.belongsTo(models.Users, {foreignKey: 'user_id'})
       }
     }
   });

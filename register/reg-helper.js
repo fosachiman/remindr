@@ -31,3 +31,4 @@ module.exports = {
   createUser,
   createCategories
 };
+
