@@ -32,6 +32,28 @@ function getCategories(req, res, next) {
   });
 }
 
+function getItems(req, res, next) {
+  models.Items.findAll({
+    where: {
+      user_id: req.params.id
+    }
+  }).then((items) => {
+    res.locals.items = items;
+  })
+}
+
+
+function updateItems(req, res, next) {
+
+}
+
+//create new item
+//find item to add description and add description
+//pull in items
+//pull in friends
+//add new friends
+//pull in users via search
+//
 
 
 module.exports = {
