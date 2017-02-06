@@ -7,11 +7,8 @@ function comparePass(userPassword, databasePassword) {
 }
 
 function loginRedirect(req, res, next) {
-  if (req.user) return res.status(401).json(
-    { status: 'You are already logged in' }
-  );
-
-  return next();
+  console.log(req.user);
+  req.user ? res.redirect('/users') : next();
 }
 
 function loginRequired(req, res, next) {

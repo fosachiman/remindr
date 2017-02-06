@@ -1,13 +1,18 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> <%= title %> </title>
-</head>
-<body>
-<h2 class="cats">
-  Your Categories
-</h2>
-</body>
-</html>
+
+<div id="container">
+  <h1>Your List</h1>
+  <i class="material-icons">perm_identity</i>
+</div>
+<ul class="collapsible" data-collapsible="accordion">
+    <% categories.forEach((category) => {%>
+    <li category="<%= category.dataValues.category %>" id="<%= category.dataValues.category %>">
+      <div class="collapsible-header"><%= category.dataValues.category %></div>
+      <div class="collapsible-body">
+        <ul id="<%= category.dataValues.category %>_list" class="<%= category.dataValues.category %> newItemField" tether="<%= category.dataValues.category %>">
+        </ul>
+        <input type="text" class="newItem" id="<%= category.dataValues.category %>_input" placeholder="Add your item here!"/>
+        <a class="btn-floating btn-large waves-effect waves-light blue <%= category.dataValues.category %>" id="<%= category.dataValues.category %>_button"><i class="material-icons" tether="<%= category.dataValues.category %>">add</i></a>
+      </div>
+    </li>
+    <% }) %>
+</ul>
