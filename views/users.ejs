@@ -7,7 +7,8 @@
 </head>
 <body>
   <div><%= title %>
-  <%= categories %>
+  <%= categories[0].dataValues.category %>
+  <%= items[0].dataValues.name %>
 
   <div class="profilepic">
 
@@ -15,4 +16,11 @@
 
     <% include ../views/partials/categories.ejs %>
 </body>
+
+<form action="<%='/users/' + user.dataValues.id +'/' + categories[0].dataValues.category %>" method="post">
+  <input type="text" name="item">
+  <input type="text" name="item">
+  <input type="text" name="item">
+  <input type="submit">
+</form>
 </html>

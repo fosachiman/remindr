@@ -8,8 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
-        type: Sequelize.BIGINT
+      userId: {
+        type: DataTypes.BIGINT,
+        field: 'user_id'
       },
       name: {
         type: Sequelize.STRING(255)

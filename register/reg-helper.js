@@ -14,6 +14,7 @@ function createUser(req, res, next) {
 }
 
 function createCategories(req, res, next) {
+  console.log(req)
   let arr = Object.keys(req.body);
   let categories = arr.filter((category) => {
     return (category != "name" && category != "email" && category != "password");

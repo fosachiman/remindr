@@ -8,8 +8,8 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Users.hasMany(models.Items);
-        Users.hasMany(models.Friends, {as: 'friends'});
+        // Users.hasMany(models.Items);
+        // Users.hasMany(models.Friends, {as: 'friends'});
       }
     }
   });
