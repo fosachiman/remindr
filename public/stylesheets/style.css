@@ -5,4 +5,18 @@ body {
 a {
   color: #00B7FF; }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=style.css.map */
+=======
+.loginAlert {
+  font-size: 15px;
+  float: left; }
+
+.editHover {
+  background: #E8F3FF; }
+
+.category-title {
+  font-size: 15pt; }
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> added inline editable functionality
