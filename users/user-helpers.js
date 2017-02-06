@@ -53,9 +53,11 @@ function deleteOldItems(req, res, next) {
 
 function submitItems(req, res, next) {
   console.log(req);
-  let arr = Object.keys(req.body);
+  let arr = req.body.item;
+  console.log('ARR:' + arr);
+  console.log('TYPE' + typeof(arr))
   console.log('ID:' + req.params.id);
-  console.log('name:' + req.body.item)
+  console.log('name:' + req.body.item[0])
   console.log('category:' + req.params.category)
   console.log('suggestion:' + false)
 
