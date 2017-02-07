@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
-        type: DataTypes.BIGINT,
+        type:Sequelize.INTEGER,
         field: 'user_id'
       },
       name: {
