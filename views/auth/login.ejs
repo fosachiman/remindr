@@ -1,8 +1,9 @@
 <% include ../partials/head.ejs %>
   <body>
-    <% include ../partials/header.ejs %>
     <main>
-      <div class="container">
+    <img class="logo" src="/images/remindr.gif">
+    <h1 class="login-header">Login</h1>
+      <div class="container login-form">
         <form action="/auth/login" method="post">
            <div>
             <label>Email:</label>
@@ -13,11 +14,10 @@
             <input type="password" name="password"/>
           </div>
           <div>
-            <input type="submit" value="Log In"/>
+            <input type="submit" class="hp-button waves-effect waves-light btn-large" value="Log In"/>
           </div>
         </form>
       </div>
     </main>
-    <% include ../partials/footer.ejs %>
   </body>
 </html>
