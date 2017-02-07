@@ -1,25 +1,35 @@
 .cog {
-  height: 5%;
-  width: 5%;
-  float: right; }
+    height: 5%;
+    width: 5%;
+    float: right;
+}
 
 .logo {
-  height: 150px;
-  width: 120px;
-  margin-top: 5%; }
+    height: 150px;
+    width: 120px;
+    margin-top: 5%;
+}
 
 .loginAlert {
-  font-size: 15px;
-  float: left; }
+    font-size: 15px;
+    float: left;
+}
 
 .editHover {
-  background: #E8F3FF; }
+    background: #E8F3FF;
+}
 
 .category-title {
-  font-size: 15pt; }
+    font-size: 15pt;
+}
 
 #delete_button {
-  height: 40px;
-  width: 2pt; }
+    height: 40px;
+    width: 2pt;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
 
 /*# sourceMappingURL=style.css.map */
