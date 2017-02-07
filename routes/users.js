@@ -10,7 +10,8 @@ router.get('/:id', users.validateUser, users.getUserName, users.getCategories, u
     uniqueUser:res.locals.user.dataValues.name,
     user: res.locals.user,
     categories: res.locals.categories,
-    items: res.locals.items
+    items: res.locals.items,
+    pageID: users
   })
 })
 

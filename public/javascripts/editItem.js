@@ -26,7 +26,7 @@ $( document ).ready(function() {
     form += "<input type=\"text\" class=\"editBox\" value=\"";
     form += oldText;
     form += "\" /> </form>";
-    form += "<a href=\"#\" class=\"btnSave white-text btn \">Save</a>";
+    form += "<a href=\"#\" class=\"btnSave white-text btn\">Save</a>";
     form += "<a href=\"#\" class=\"btnDiscard\"> <span> Cancel </span> </a>";
     return form
   }
