@@ -1,32 +1,75 @@
-//when a category is pulled in, it should have the category listed in the element
 
-//ADD
+let button = document.querySelectorAll('.add-button');
+button.forEach((button) => {
+  button.addEventListener('click', addClickHandler);
+})
 
-let input = document.querySelector('#add-text');
-let button = document.querySelector('#add-button');
-button.addEventListener('click', addClickHandler);
+let trashButton = document.querySelectorAll('.delete-button');
+trashButton.forEach((button) => {
+  button.addEventListener('click', trashItem);
+})
+let listItem = document.querySelector('.list-item');
+  listItem.addEventListener('change', addSubmitButton);
 
-function addClickHandler() {
-  let newThing = document.createElement('p');
-  let list = document.querySelector('#list');
-  list.appendChild(newThing);
-  newThing.innerHTML = input.value;
-  newThing.setAttribute('style', 'background-color: green');
+
+function addClickHandler(e) {
+  //GOING DEEP INTO THE EVENT OBJECT lol
+  // console.log(e.srcElement.attributes.category.textContent)
+
+  let newThing = document.createElement('div');
+  let list = document.querySelectorAll('.item-list');
+  let addBox = document.querySelectorAll('.add-item-text')
+  list.forEach((list) => {
+    if (list.getAttribute('category') === e.srcElement.attributes.category.textContent){
+      console.log(list.getAttribute('category'))
+      list.appendChild(newThing);
+    }
+  })
+  let newItem = document.createElement('input');
+
+  // newThing.setAttribute('category', newThing.parentElement.category)
+  newItem.setAttribute('class', 'newItem col s10 list-item');
+  newItem.setAttribute('type', 'text');
+  newItem.setAttribute('name', 'item');
+  addBox.forEach((addBox) => {
+    if (addBox.getAttribute('category') === e.srcElement.attributes.category.textContent)
+      newItem.setAttribute('value', addBox.value);
+  })
+  let trash = document.createElement('i');
+  trash.setAttribute('class', 'material-icons col s1 delete-button');
+  trash.setAttribute('id', 'delete-button');
+  trash.innerHTML = 'delete';
+  let desc = document.createElement('i');
+  desc.setAttribute('class', 'material-icons col s1 desc-button');
+  desc.setAttribute('id', 'desc-button');
+  desc.innerHTML = 'info';
+  newThing.appendChild(newItem);
+  newThing.appendChild(trash);
+  newThing.appendChild(desc);
+  trash.addEventListener('click', trashItem);
+  resetAddBox(e);
+  addSubmitButton(e);
 }
 
+function resetAddBox(e) {
+  let addBox = document.querySelectorAll('.add-item-text');
+  addBox.forEach((addBox) => {
+    if (addBox.category === e.target.category)
+      addBox.value = '';
+  })
 
-//DELETE
-let item = document.querySelector('#Shaun-of-the-Dead');
+}
 
-let checkbox= document.querySelector('#delete-button');
+function trashItem(e) {
+  let parent = e.target.parentElement;
+  $(parent).remove();
+  addSubmitButton();
+}
 
-checkbox.addEventListener('click', deleteClickHandler);
-
-function deleteClickHandler(e) {
-  e.preventDefault;
-  if (item.style.textDecoration === 'line-through')
-   item.style = '';
-  else
-    item.style.textDecoration = 'line-through';
+function addSubmitButton(e) {
+  let submitButtonCont = document.querySelectorAll('.sub-button-cont');
+  submitButtonCont.forEach((sbc) => {
+    sbc.setAttribute('style', 'display: block');
+  })
 }
 

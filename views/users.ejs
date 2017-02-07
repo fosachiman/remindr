@@ -2,61 +2,19 @@
   <% include ../views/partials/head.ejs %>
 <body>
 <% include ../views/partials/header.ejs %>
-  <% items.forEach(function(item){ %>
-    <div class="inline-editable" id="text">
-      <%= categories[0].dataValues.category %>
-      <% if (items[0]) { %>
-      <%= items[0].dataValues.name %>
-      <% } %>
-    </div>
-    <a class="waves-effect waves-light btn sm" id="delete_button"><i class="material-icons">X</i></a>
-  </div>
-    <% }) %><!-- add for each loop -->
-  <!-- add for each loop -->
-  <!--<%= title %>-->
-  <!--<%= categories %>-->
 
 
+
+
+
+  <% include ../views/partials/logout.ejs%>
   <div class="profilepic">
 
   </div>
 
 
-
-    <% include ../views/partials/categories.ejs %>
-
-    <script>
-    const arr = [];
-     arr.forEach(function(item){
-        $(".new").append(`<input type="text" value=${item}>`);
-        console.log(item);
-      })
-
-      function target() {
-        let newItem = $(".newItem").val();
-        $(".newItem").val("");
-        arr.push(newItem);
-        console.log(arr);
-      }
-      $("a").on("click", target);
-    </script>
-
-    <form action="<%='/users/' + user.dataValues.id +'/' + categories[0].dataValues.category %>" method="post">
-        <input type="text" name="item">
-        <input type="text" name="item">
-        <input type="text" name="item">
-      <input type="submit"class="submit">
-    </form>
+    <% include ../views/partials/JH-2.ejs %>
     <% include ../views/partials/scripts.ejs %>
 </body>
-
-  <% include ../views/partials/jh.ejs %>
-
-<form action="<%='/users/' + user.dataValues.id +'/' + categories[0].dataValues.category %>" method="post">
-  <input type="text" name="item">
-  <input type="text" name="item">
-  <input type="text" name="item">
-  <input type="submit">
-</form>
 
 </html>

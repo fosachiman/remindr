@@ -1,34 +1,96 @@
+body {
+  background-color: rgba(178, 224, 216, 0.3); }
+
+a {
+  color: blue; }
 
 .cog {
-    height: 5%;
-    width: 5%;
-    float: right;
-}
+  height: 5%;
+  width: 5%;
+  float: right; }
 
 .logo {
-    height: 150px;
-    width: 120px;
-    margin-top: 5%;
-}
+  height: 150px;
+  width: 120px;
+  margin-top: 1%;
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
 
 .loginAlert {
-    font-size: 15px;
-    float: left;
-}
+  font-size: 15px;
+  float: left; }
 
 .editHover {
-    background: #E8F3FF;
-}
+  background: #E8F3FF; }
 
 .category-title {
-    font-size: 15pt;
-}
+  font-size: 15pt; }
 
 #delete_button {
-    height: 40px;
-    width: 2pt;
-}
+  height: 40px;
+  width: 2pt; }
 
+.title {
+  text-align: center;
+  font-family: "Pattaya", sans-serif; }
+
+.hp-button {
+  display: block;
+  margin: 2% auto;
+  font-family: "Raleway", sans-serif; }
+
+.slogan {
+  text-align: center;
+  font-family: "Raleway", sans-serif; }
+
+.login-header {
+  font-family: "Pattaya", sans-serif;
+  text-align: center; }
+
+.login-form {
+  margin-top: 5%;
+  font-family: "Raleway", sans-serif; }
+
+.box-thing {
+  background-color: white;
+  font-family: "Raleway", sans-serif; }
+
+.register-header {
+  text-align: center;
+  font-family: "Pattaya", sans-serif; }
+
+.register-form {
+  font-family: "Raleway", sans-serif; }
+
+.add-field {
+  display: inline-block;
+  width: 80%; }
+
+.add-button-cont {
+  display: inline-block;
+  text-align: center; }
+
+.category-item {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.list-item {
+  text-transform: capitalize; }
+
+.delete-button {
+  text-align: center; }
+
+.delete-button:hover {
+  cursor: pointer; }
+
+.desc-button {
+  text-align: center; }
+
+.desc-button:hover {
+  cursor: pointer; }
+
+.sub-button-cont {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
-
