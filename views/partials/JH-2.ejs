@@ -1,20 +1,19 @@
 
 
-
 <ul class="collapsible box-thing" data-collapsible="accordion">
     <% categories.forEach((category) => {%>
   <li category="<%= category.dataValues.category %>" id="<%= category.dataValues.category %>">
     <div class="collapsible-header category-item"><%= category.dataValues.category %></div>
     <div class="collapsible-body row">
-      <input id="add-item-text" type="text" placeholder="add a thing" class="add-field input-field col s10">
+      <input category="<%= category.dataValues.category %>" id="add-item-text" type="text" placeholder="add a thing" class="add-field input-field col s10 add-item-text">
       <div class="col s2 add-button-cont">
-       <a id="add-button" class="btn-floating btn-large waves-effect waves-light add-button"><i class="material-icons">add</i></a>
+       <a category="<%= category.dataValues.category %>" id="add-button" class="btn-floating btn-large waves-effect waves-light add-button"><i category="<%= category.dataValues.category %>" class="material-icons">add</i></a>
       </div>
       <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="post">
-        <ul id="item-list" class="<%= category.dataValues.category %> newItemField" tether="<%= category.dataValues.category %>">
+        <ul id="item-list" category="<%= category.dataValues.category %>" class="<%= category.dataValues.category %> newItemField item-list" tether="<%= category.dataValues.category %>">
           <% items.forEach((item) => { %>
-          <% if (item.dataValues.category === category.dataValues.category && item.dataValues.name !== '') { %>
-            <div>
+          <% if (item.dataValues.category === category.dataValues.category && item.dataValues.name !== '' && item.dataValues.name != null) { %>
+            <div category="<%=item.dataValues.category%>">
               <input type="text" name="item" class="newItem col s10 list-item" id="<%= item.dataValues.name %>_input" value="<%= item.dataValues.name %>">
               <i class="material-icons col s1 delete-button" id="delete-button">delete</i>
               <i class="material-icons col s1 desc-button" id="desc-button">info</i>
