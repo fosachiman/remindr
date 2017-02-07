@@ -6,16 +6,20 @@
     <li category="<%= category.dataValues.category %>" id="<%= category.dataValues.category %>">
       <div class="collapsible-header"><%= category.dataValues.category %></div>
       <div class="collapsible-body">
+      <input type="text" placeholder="add a thing">
+      <button id="add-button">Add a thing</button>
+      <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="post">
         <ul id="<%= category.dataValues.category %>_list" class="<%= category.dataValues.category %> newItemField" tether="<%= category.dataValues.category %>">
-        <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="post">
           <% items.forEach((item) => { %>
           <% if (item.dataValues.category === category.dataValues.category && item.dataValues.name !== '') { %>
-            <input type="text" class="newItem" id="<%= item.dataValues.name %>_input" value="<%= item.dataValues.name %>">
+            <div>
+              <input type="text" name="item" class="newItem" id="<%= item.dataValues.name %>_input" value="<%= item.dataValues.name %>">
+              <button id="delete-button">Delete</button>
+            </div>
           <%  } }) %>
           <input type="submit">
         </form>
         </ul>
-        <a class="btn-floating btn-large waves-effect waves-light blue <%= category.dataValues.category %>" id="<%= category.dataValues.category %>_button"><i class="material-icons" tether="<%= category.dataValues.category %>">add</i></a>
       </div>
     </li>
     <% }) %>

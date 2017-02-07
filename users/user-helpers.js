@@ -57,20 +57,29 @@ function deleteOldItems(req, res, next) {
 function submitItems(req, res, next) {
   console.log(req);
   let arr = req.body.item;
-  console.log('ARR:' + arr);
-  console.log('TYPE' + typeof(arr))
-  console.log('ID:' + req.params.id);
-  console.log('category:' + req.params.category)
-  console.log('suggestion:' + false)
-
-  arr.forEach((item, index) => {
+  // console.log('ARR:' + arr);
+  // console.log('TYPE' + typeof(arr))
+  // console.log('ID:' + req.params.id);
+  // console.log('category:' + req.params.category)
+  // console.log('suggestion:' + false)
+  if (typeof(arr) == 'string') {
     models.Items.create({
       user_id: req.params.id,
-      name: item,
+      name: req.body.item,
       category: req.params.category,
       suggestion: false
     })
-  });
+  }
+  else {
+    arr.forEach((item, index) => {
+      models.Items.create({
+        user_id: req.params.id,
+        name: item,
+        category: req.params.category,
+        suggestion: false
+      })
+    });
+  }
   next();
 }
 
