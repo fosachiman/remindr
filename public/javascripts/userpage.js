@@ -22,7 +22,8 @@ let checkbox= document.querySelector('#delete-button');
 
 checkbox.addEventListener('click', deleteClickHandler);
 
-function deleteClickHandler() {
+function deleteClickHandler(e) {
+  e.preventDefault;
   if (item.style.textDecoration === 'line-through')
    item.style = '';
   else
