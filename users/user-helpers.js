@@ -58,11 +58,11 @@ function submitItems(req, res, next) {
   console.log(req);
   let arr = req.body.item;
   // console.log('ARR:' + arr);
-  // console.log('TYPE' + typeof(arr))
+  console.log('TYPE' + typeof(arr))
   // console.log('ID:' + req.params.id);
   // console.log('category:' + req.params.category)
   // console.log('suggestion:' + false)
-  if (typeof(arr) == 'string') {
+  if (typeof(arr) == 'string' || typeof(arr) == 'undefined') {
     models.Items.create({
       user_id: req.params.id,
       name: req.body.item,

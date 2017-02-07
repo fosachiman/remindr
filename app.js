@@ -18,8 +18,8 @@ var app = express();
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-const userRoutes = require('./routes/users.js')
-const authRoutes = require('./routes/auth.js');
+const authRoutes = require('./routes/auth');
+require('dotenv').config();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

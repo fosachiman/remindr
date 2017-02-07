@@ -3,9 +3,6 @@ var router = express.Router();
 var models = require('../db/models/index'); // importing the model
 var users = require('../users/user-helpers')
 
-var authHelpers = require('../auth/auth-helper');
-
-
 /* GET users listing. */
 router.get('/:id', users.validateUser, users.getUserName, users.getCategories, users.getItems, function(req, res, next) {
   res.render('users', {
