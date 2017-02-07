@@ -49,4 +49,13 @@
     </form>
     <% include ../views/partials/scripts.ejs %>
 </body>
+
+  <% include ../views/partials/jh.ejs %>
+
+<form action="<%='/users/' + user.dataValues.id +'/' + categories[0].dataValues.category %>" method="post">
+  <input type="text" name="item">
+  <input type="text" name="item">
+  <input type="text" name="item">
+  <input type="submit">
+</form>
 </html>

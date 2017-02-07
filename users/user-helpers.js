@@ -46,7 +46,10 @@ function getItems(req, res, next) {
 
 function deleteOldItems(req, res, next) {
   models.Items.destroy({
-    where: {user_id: req.params.id}
+    where: {
+      user_id: req.params.id,
+      category: req.params.category
+    }
   })
   next();
 }
@@ -57,7 +60,6 @@ function submitItems(req, res, next) {
   console.log('ARR:' + arr);
   console.log('TYPE' + typeof(arr))
   console.log('ID:' + req.params.id);
-  console.log('name:' + req.body.item[0])
   console.log('category:' + req.params.category)
   console.log('suggestion:' + false)
 
@@ -72,34 +74,11 @@ function submitItems(req, res, next) {
   next();
 }
 
-//  body: { item: [ 'a', 'ba', 'ca' ] },
-
-// let arr = Object.keys(req.body);
-//   let categories = arr.filter((category) => {
-//     return (category != "name" && category != "email" && category != "password");
-//   });
-//    categories.forEach((category) => {
-//    models.Categories.create({
-//       email: req.body.email,
-//       category: category
-//     });
-//   });
-//   next();
-// }
 
 //find item to add description and add description
 //pull in friends
 //add new friends
-//pull in users via search
-//
 
-
-//MANAGE THE BUTTON
-
-//remember, you're submitting a form that passes the value
-//each value is passed
-//POST to /:userID/:category - these two values can be obtained from the params
-//as well as the
 
 
 
