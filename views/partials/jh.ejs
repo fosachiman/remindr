@@ -10,14 +10,12 @@
       <button id="add-button">Add a thing</button>
       <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="post">
         <ul id="<%= category.dataValues.category %>_list" class="<%= category.dataValues.category %> newItemField" tether="<%= category.dataValues.category %>">
-
-          <li class="inline-editable" id="text">
           <% items.forEach((item) => { %>
-          <% if (item.dataValues.category === category.dataValues.category && item.dataValues.name !== '') { %>
+          <li class="inline-editable" id="text" <% if (item.dataValues.category === category.dataValues.category && item.dataValues.name !== '') { %> >
               <img class="info" src="/images/info-button.png">
               <input type="text" name="item" class="newItem" id="<%= item.dataValues.name %>_input" value="<%= item.dataValues.name %>">
-              </li>
-              <button id="delete-button">Delete</button>
+            <button id="delete-button">Delete</button>
+            </li>
 
           <%  } }) %>
           <input type="submit">

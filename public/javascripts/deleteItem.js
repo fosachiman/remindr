@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$("#delete_button").click(function () {
+$("#delete-button").click(function () {
         $(".inline-editable").fadeOut("slow");
         $("#delete-button").fadeOut("slow");
     setTimeout(function(){
