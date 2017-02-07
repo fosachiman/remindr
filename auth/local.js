@@ -3,16 +3,18 @@ const LocalStrategy = require('passport-local').Strategy;
 
 const init = require('./passport');
 const models = require('../db/models/index');
-const authHelpers = require('../auth/auth-helper');
+const authHelpers = require('../auth/auth-helpers');
 
 const options = {};
 
 init();
 
-passport.use(new LocalStrategy(options, (email, password, done) => {
+passport.use(new LocalStrategy({
+    usernameField: 'email'},
+     (username, password, done) => {
   models.Users.findOne({
     where: {
-      email
+      email: username
     }
   }).then((user) => {
     console.log('USER:' + user);

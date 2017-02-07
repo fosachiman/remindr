@@ -9,9 +9,9 @@ router.get('/login', authHelpers.loginRedirect, (req,res) => {
 });
 
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '/',
+  successRedirect: '/auth/login',
   failureRedirect: '/register',
-  // failureFlash: true
+  failureFlash: true
 })
 );
 
