@@ -1,13 +1,13 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+.cog {
+  height: 5%;
+  width: 5%;
+  float: right; }
 
-a {
-  color: #00B7FF; }
+.logo {
+  height: 150px;
+  width: 120px;
+  margin-top: 5%; }
 
-<<<<<<< HEAD
-/*# sourceMappingURL=style.css.map */
-=======
 .loginAlert {
   font-size: 15px;
   float: left; }
@@ -18,5 +18,8 @@ a {
 .category-title {
   font-size: 15pt; }
 
+#delete_button {
+  height: 40px;
+  width: 2pt; }
+
 /*# sourceMappingURL=style.css.map */
->>>>>>> added inline editable functionality

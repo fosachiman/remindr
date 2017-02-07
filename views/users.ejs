@@ -1,22 +1,18 @@
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='/sass/materialize.css' />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>  <%= title %> </title>
-</head>
+  <% include ../views/partials/head.ejs %>
 <body>
-
-  <div><%= title %>
-  <%= categories[0].dataValues.category %>
-  <% if (items[0]) { %>
-  <%= items[0].dataValues.name %>
-  <% } %>
-
-  <div>
+<% include ../views/partials/header.ejs %>
+  <% items.forEach(function(item){ %>
+    <div class="inline-editable" id="text">
+      <%= categories[0].dataValues.category %>
+      <% if (items[0]) { %>
+      <%= items[0].dataValues.name %>
+      <% } %>
+    </div>
+    <a class="waves-effect waves-light btn sm" id="delete_button"><i class="material-icons">X</i></a>
+  </div>
+    <% }) %><!-- add for each loop -->
+  <!-- add for each loop -->
   <!--<%= title %>-->
   <!--<%= categories %>-->
 
@@ -26,8 +22,7 @@
   </div>
 
     <% include ../views/partials/categories.ejs %>
-     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
     <script>
     function target(e) {
       let newItem = $("input").val();
@@ -36,12 +31,14 @@
     }
     $("a").on("click", target);
     </script>
+
+    <form action="<%='/users/' + user.dataValues.id +'/' + categories[0].dataValues.category %>" method="post">
+        <input type="text" name="item">
+        <input type="text" name="item">
+        <input type="text" name="item">
+      <input type="submit"class="submit">
+    </form>
+    <% include ../views/partials/scripts.ejs %>
 </body>
 
-<form action="<%='/users/' + user.dataValues.id +'/' + categories[0].dataValues.category %>" method="post">
-  <input type="text" name="item">
-  <input type="text" name="item">
-  <input type="text" name="item">
-  <input type="submit">
-</form>
 </html>
