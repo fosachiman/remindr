@@ -9,12 +9,22 @@
       <div class="collapsible-body">
         <ul id="<%= category.dataValues.category %>_list" class="<%= category.dataValues.category %> newItemField" tether="<%= category.dataValues.category %>">
         </ul>
+        <a class="btn-floating btn-small waves-effect waves-light <%= category.dataValues.category %>" id="<%= category.dataValues.category %>_button"><i class="material-icons" tether="<%= category.dataValues.category %>">add</i></a>
         <input type="text" class="newItem" id="<%= category.dataValues.category %>_input" placeholder="Add your item here!" />
-        <a class="btn-floating btn-large waves-effect waves-light blue <%= category.dataValues.category %>" id="<%= category.dataValues.category %>_button"><i class="material-icons" tether="<%= category.dataValues.category %>">add</i></a>
         <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="post" class="new">
-  <input type="submit" id="submit">
+  </button>
+  <form  method="post" class="newItems">
+
+     <button class="btn waves-effect waves-light" type="submit" name="action">Save
+    <i class="material-icons right">send</i>
+    </form>
 </form>
+
       </div>
+      <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="PUT" >
+  <input type="text" name="desc" placeholder="description">
+  <input type="submit" name="" id="">
+</form>
     </li>
     <% }) %>
 </ul>
