@@ -5,12 +5,18 @@
 let input = document.querySelector('#add-item-text');
 let button = document.querySelector('#add-button');
 button.addEventListener('click', addClickHandler);
+let trashButton = document.querySelectorAll('.delete-button');
+trashButton.forEach((button) => {
+  button.addEventListener('click', trashItem);
+})
+let listItem = document.querySelector('.list-item');
+listItem.addEventListener('change', addSubmitButton);
+
 
 function addClickHandler() {
   let newThing = document.createElement('div');
   let list = document.querySelector('#item-list');
   let addBox = document.querySelector('#add-item-text')
-  // let parent = list.parentElement;
   list.appendChild(newThing);
   let newItem = document.createElement('input');
   newItem.setAttribute('class', 'newItem col s10 list-item');
@@ -28,8 +34,10 @@ function addClickHandler() {
   newThing.appendChild(newItem);
   newThing.appendChild(trash);
   newThing.appendChild(desc);
+  trash.addEventListener('click', trashItem);
   newThing.setAttribute('style', 'background-color: green');
   resetAddBox();
+  addSubmitButton();
 }
 
 function resetAddBox() {
@@ -37,20 +45,15 @@ function resetAddBox() {
   addBox.value = '';
 }
 
+function trashItem(e) {
+  let parent = e.target.parentElement;
+  $(parent).remove();
+  addSubmitButton();
+}
 
-//DELETE
-let item = document.querySelector('#Shaun-of-the-Dead');
-
-let checkbox= document.querySelector('#delete-button');
-
-checkbox.addEventListener('click', deleteClickHandler);
-
-function deleteClickHandler(e) {
-  e.preventDefault;
-  if (item.style.textDecoration === 'line-through')
-   item.style = '';
-  else
-    item.style.textDecoration = 'line-through';
+function addSubmitButton() {
+  let submitButtonCont = document.querySelector('.sub-button-cont');
+  submitButtonCont.setAttribute('style', 'display: block');
 }
 
 // <ul class="collapsible box-thing" data-collapsible="accordion">

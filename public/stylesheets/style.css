@@ -90,4 +90,7 @@ a {
 .desc-button:hover {
   cursor: pointer; }
 
+.sub-button-cont {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */
