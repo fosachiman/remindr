@@ -2,19 +2,10 @@
   <% include ../views/partials/head.ejs %>
 <body>
 <% include ../views/partials/header.ejs %>
-  <% items.forEach(function(item){ %>
-    <div class="inline-editable" id="text">
-      <%= categories[0].dataValues.category %>
-      <% if (items[0]) { %>
-      <%= items[0].dataValues.name %>
-      <% } %>
-    </div>
-    <a class="waves-effect waves-light btn sm" id="delete_button"><i class="material-icons">X</i></a>
-  </div>
-    <% }) %><!-- add for each loop -->
-  <!-- add for each loop -->
-  <!--<%= title %>-->
-  <!--<%= categories %>-->
+
+
+
+
 
   <% include ../views/partials/logout.ejs%>
   <div class="profilepic">
