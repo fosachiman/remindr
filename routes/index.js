@@ -7,7 +7,7 @@ var models = require('../db/models/index');
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Remindr',
-    slogan: 'Never waste an wasted moment again'
+    slogan: 'Never waste a wasted moment again'
   });
 });
 
