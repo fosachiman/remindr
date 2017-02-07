@@ -1,5 +1,8 @@
 
 
+
+
+
 <div id="container">
   <h1>Your List</h1>
   <i class="material-icons">perm_identity</i>
@@ -11,8 +14,11 @@
       <div class="collapsible-body">
         <ul id="<%= category.dataValues.category %>_list" class="<%= category.dataValues.category %> newItemField" tether="<%= category.dataValues.category %>">
         </ul>
-        <input type="text" class="newItem" id="<%= category.dataValues.category %>_input" placeholder="Add your item here!"/>
+        <input type="text" class="newItem" id="<%= category.dataValues.category %>_input" placeholder="Add your item here!" />
         <a class="btn-floating btn-large waves-effect waves-light blue <%= category.dataValues.category %>" id="<%= category.dataValues.category %>_button"><i class="material-icons" tether="<%= category.dataValues.category %>">add</i></a>
+        <form action="<%='/users/' + user.dataValues.id +'/' + category.dataValues.category %>" method="post" class="new">
+  <input type="submit" id="submit">
+</form>
       </div>
     </li>
     <% }) %>
