@@ -2,12 +2,16 @@
   <% include ../views/partials/head.ejs %>
 <body>
 <% include ../views/partials/header.ejs %>
-  <div class="inline-editable" id="text">
-    <%= categories[0].dataValues.category %>
-    <% if (items[0]) { %>
-    <%= items[0].dataValues.name %>
-    <% } %>
-  </div><!-- add for each loop -->
+  <% items.forEach(function(item){ %>
+    <div class="inline-editable" id="text">
+      <%= categories[0].dataValues.category %>
+      <% if (items[0]) { %>
+      <%= items[0].dataValues.name %>
+      <% } %>
+    </div>
+    <a class="btn-floating btn-large waves-effect waves-light blue" id="test_button"><i class="material-icons">delete</i></a>
+  </div>
+    <% }) %><!-- add for each loop -->
   <!-- add for each loop -->
   <!--<%= title %>-->
   <!--<%= categories %>-->
