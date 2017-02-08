@@ -1,0 +1,20 @@
+
+<html>
+  <% include ../views/partials/head.ejs %>
+<body>
+
+
+
+
+
+  <% include ../views/partials/logout.ejs%>
+
+    <p><%=item.dataValues.name%></p>
+    <form method="post" action='<%="/users/" + userId + "/edit/" + item.dataValues.id%>'>
+    <textarea name="desc" placeholder="Add a description to your remindr"></textarea>
+    <input type="submit">
+    </form>
+    <% include ../views/partials/scripts.ejs %>
+</body>
+
+</html>

@@ -2,17 +2,16 @@
 <html>
   <% include ../views/partials/head.ejs %>
   <body>
-    <h1><%= title %></h1>
+    <img class="logo" src="/images/remindr.gif">
+    <h1 class="title"><%= title %></h1>
+    <p class="slogan"> <%= slogan %></p>
     <div class="login">
-    <a href="<%='/auth/login' %>"><button class="login"> Login </button> </a>
+    <a href="<%='/auth/login' %>"><button class="hp-button waves-effect waves-light btn-large"> Login </button> </a>
     </div>
     <div class="register">
-      <a href="<%='/register' %>"><button class="register"> Register </button></a>
+      <a href="<%='/register' %>"><button class="hp-button waves-effect waves-light btn-large"> Register </button></a>
     </div>
 
-    <p> <%= slogan %></p>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="/reload/reload.js"></script>
+    <% include ../views/partials/scripts.ejs %>
   </body>
 </html>

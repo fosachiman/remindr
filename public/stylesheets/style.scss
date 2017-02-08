@@ -3,9 +3,19 @@
 
 // sass style.scss:style.css --watch
 
-a {
-  color: black;
+$backgroundColor: rgba(178,224,216,.3);
+$secondaryColor: white;
+$headerFont: 'Pattaya', sans-serif;
+$copyFont: 'Raleway', sans-serif;
+
+body {
+  background-color: $backgroundColor;
 }
+
+a {
+  color: blue;
+}
+
 .cog{
   height: 5%;
   width: 5%;
@@ -15,7 +25,10 @@ a {
 .logo{
   height: 150px;
   width: 120px;
-  margin-top: 5%;
+  margin-top: 1%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .loginAlert{
@@ -36,8 +49,73 @@ a {
   width: 2pt;
 }
 
-.info{
-  height: 20px;
-  width: 20px;
-  float: right;
+.title {
+  text-align: center;
+  font-family: $headerFont;
+}
+.hp-button {
+  display: block;
+  margin: 2% auto;
+  font-family: $copyFont;
+}
+.slogan {
+  text-align: center;
+  font-family: $copyFont;
+}
+.login-header {
+  font-family: $headerFont;
+  text-align: center;
+}
+.login-form {
+  margin-top: 5%;
+  font-family: $copyFont;
+}
+.box-thing {
+  background-color: $secondaryColor;
+  font-family: $copyFont;
+}
+.register-header {
+  text-align: center;
+  font-family: $headerFont;
+}
+.register-form {
+  font-family: $copyFont;
+}
+.add-field {
+  display: inline-block;
+  width: 80%;
+}
+.add-button-cont {
+  display: inline-block;
+  text-align: center;
+
+}
+.category-item {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.list-item {
+  text-transform: capitalize;
+}
+.delete-button {
+  text-align: center;
+}
+.delete-button:hover {
+  cursor: pointer;
+}
+.desc-button {
+  text-align: center;
+}
+.desc-button:hover {
+  cursor: pointer;
+}
+.sub-button-cont {
+  display: none;
+}
+#item-description {
+  color: gray;
+  margin-top: -20px;
+}
+#add-button {
+  margin-top: -20px;
 }

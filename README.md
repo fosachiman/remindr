@@ -1,3 +1,4 @@
+
 ### REMINDR
 
 ##About:
@@ -43,3 +44,5 @@ to friends in their friends circle.
 - Unclear Sequelize error messagaes
 - Time constraints
 - Project Management/Communication issues
+
+More info coming soon!
