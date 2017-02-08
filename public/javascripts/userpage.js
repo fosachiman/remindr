@@ -8,8 +8,12 @@ let trashButton = document.querySelectorAll('.delete-button');
 trashButton.forEach((button) => {
   button.addEventListener('click', trashItem);
 })
-let listItem = document.querySelector('.list-item');
-  listItem.addEventListener('change', addSubmitButton);
+let listItem = document.querySelectorAll('.list-item');
+listItem.forEach((item) => {
+  item.addEventListener('change', addSubmitButton);
+})
+
+
 
 
 function addClickHandler(e) {

@@ -96,6 +96,7 @@ function submitItems(req, res, next) {
             user_id: req.params.id,
             name: req.body.item,
             category: req.params.category,
+            desc: req.body.desc,
             suggestion: false
                 //give it user_id of the user that made the request
                 //give it a name of what the user defined in the field
