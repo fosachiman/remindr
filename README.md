@@ -21,7 +21,7 @@ We will know this to be true when users are able to discover new media with out 
 
 ##Wireframe:
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/index.png)
+![alt tag](/fosachiman/remindr/public/images/index.png?raw=true)
 
 ![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/register.png)
 
