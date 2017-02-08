@@ -16,20 +16,17 @@ router.get('/:id', users.validateUser, auth.loginRequired, users.getUserName, us
     })
 })
 
-router.get('/:id/edit/:item_id', auth.loginRequired, users.getOne, function(req, res.next) {
+router.get('/:id/edit/:item_id', auth.loginRequired, users.getOne, function(req, res, next) {
     res.render('itemrevise', {
-        item: res.locals.item
+        item: res.locals.item,
+        userId: req.params.id
     })
 })
 
-router.put('/:id/:category', function(req, res, next) {
-    models.Items.update({
-        desc: req.body.desc
-    }, { where: { id: req.User.id } }).then(function() {
-        res.redirect('/');
-    });
-}) module.exports = router;
 
+router.post('/:id/edit/:item_id', users.addDesc, function(req, res, next) {
+  res.redirect('/users/' + req.params.id)
+})
 
 //users/:id/edit/:item
 

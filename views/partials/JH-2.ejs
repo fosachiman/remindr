@@ -17,6 +17,9 @@
               <input type="text" name="item" class="newItem col s10 list-item" id="<%= item.dataValues.name %>_input" value="<%= item.dataValues.name %>">
               <i class="material-icons col s1 delete-button" id="delete-button">delete</i>
               <a href='<%="/users/" + user.dataValues.id + "/edit/" + item.dataValues.id %>'<i class="material-icons col s1 desc-button" id="desc-button">info</i></a>
+               <% if (item.dataValues.desc != '' && item.dataValues.desc != null && item.dataValues.desc != undefined) { %>
+                <input type="text" name="desc" id="item-description" class="item-description col s10 list-item" value="<%=item.dataValues.desc%>">
+               <% } %>
             </div>
           <%  } }) %>
         </ul>

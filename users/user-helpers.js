@@ -59,7 +59,7 @@ function getItems(req, res, next) {
 function getOne(req, res, next) {
     models.Items.findOne({
         where: {
-            item_id: req.params.item_id
+            id: req.params.item_id
         }
     }).then((item) => {
         res.locals.item = item;
@@ -117,15 +117,18 @@ function submitItems(req, res, next) {
     next();
 }
 
-//messing around with making a desc
-function addDesc(req, res) {
-    models.Items.update()
-
+function addDesc(req, res, next) {
+  models.Items.update({
+    desc: req.body.desc
+  }, {where: {id: req.params.item_id}
+  })
+  // sequelize.query("UPDATE Items SET desc=" + req.body.desc + "WHERE item_id=" + req.params.item_id + ";")
+  .then((desc) => {
+    console.log(desc);
+    res.locals.desc = desc;
+    next();
+  })
 }
-//pull in friends
-//add new friends
-
-
 
 
 module.exports = {
@@ -135,5 +138,6 @@ module.exports = {
     getItems,
     deleteOldItems,
     submitItems,
+    getOne,
     addDesc
 };
