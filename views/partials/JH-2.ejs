@@ -5,7 +5,7 @@
   <li category="<%= category.dataValues.category %>" id="<%= category.dataValues.category %>">
     <div class="collapsible-header category-item"><%= category.dataValues.category %></div>
     <div class="collapsible-body row">
-      <input category="<%= category.dataValues.category %>" id="add-item-text" type="text" placeholder="add a thing" class="add-field input-field col s10 add-item-text">
+      <input category="<%= category.dataValues.category %>" id="add-item-text" type="text" placeholder="Set a remindr" class="add-field input-field col s10 add-item-text">
       <div class="col s2 add-button-cont">
        <a category="<%= category.dataValues.category %>" id="add-button" class="btn-floating btn-large waves-effect waves-light add-button"><i category="<%= category.dataValues.category %>" class="material-icons">add</i></a>
       </div>
@@ -16,7 +16,7 @@
             <div category="<%=item.dataValues.category%>">
               <input type="text" name="item" class="newItem col s10 list-item" id="<%= item.dataValues.name %>_input" value="<%= item.dataValues.name %>">
               <i class="material-icons col s1 delete-button" id="delete-button">delete</i>
-              <i class="material-icons col s1 desc-button" id="desc-button">info</i>
+              <a href='<%="/users/" + user.dataValues.id + "/edit/" + item.dataValues.id %>'<i class="material-icons col s1 desc-button" id="desc-button">info</i></a>
             </div>
           <%  } }) %>
         </ul>

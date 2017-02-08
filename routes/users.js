@@ -2,9 +2,10 @@ var express = require('express');
 var router = express.Router();
 var models = require('../db/models/index'); // importing the model
 var users = require('../users/user-helpers')
+var auth = require('../auth/auth-helpers')
 
 /* GET users listing. */
-router.get('/:id', users.validateUser, users.getUserName, users.getCategories, users.getItems, function(req, res, next) {
+router.get('/:id', users.validateUser, auth.loginRequired, users.getUserName, users.getCategories, users.getItems, function(req, res, next) {
   res.render('users', {
     title: 'Remindr',
     uniqueUser:res.locals.user.dataValues.name,
@@ -19,3 +20,9 @@ router.post('/:id/:category', users.deleteOldItems, users.submitItems, function(
 })
 
 module.exports = router;
+
+
+//users/:id/edit/:item
+
+//get the item id and pass it through the request
+//a href = /req.params.userid/edit/ITEM ID
