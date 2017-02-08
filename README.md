@@ -1,6 +1,6 @@
 
 ### REMINDR
-
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/remindr.gif)
 ##About:
 Our app aims to solve the problem of wasted consumption, that is we think of all the things we want to consume - movies, books, tv, video games, etc - but we end up defaulting to our go-tos when we actually have free time.  This app aims to make our consumption more productive, to actually remind us to try the new book or tv show we’ve been wanting to check out.
 
@@ -19,6 +19,28 @@ We believe that by developing a reminder platform for people who are busy and ge
 
 We will know this to be true when users are able to discover new media with out having to waste time searching for it.
 
+##Wireframe:
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/index.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/register.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/redirect.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/userpage.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/additem.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/edititem.png)
+
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/editfield.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/delete.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/changes.png)
+
+![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/submit.png)
 
 ## Technologies Used:
 
