@@ -7,7 +7,7 @@ function validateUser(req, res, next) {
     //if the user requsted is not a user
         return res.send('no user of that name');
     else
-    //if the user requested is a user in out database, then . . .
+    //if the user requested is a user in our database, then . . .
         next();
 }
 
@@ -52,6 +52,17 @@ function getItems(req, res, next) {
     }).then((items) => {
         console.log('items:' + items)
         res.locals.items = items;
+        next();
+    })
+}
+
+function getOne(req, res, next) {
+    models.Items.findOne({
+        where: {
+            item_id: req.params.item_id
+        }
+    }).then((item) => {
+        res.locals.item = item;
         next();
     })
 }

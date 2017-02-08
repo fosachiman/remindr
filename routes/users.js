@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../db/models/index'); // importing the model
-var users = require('../users/user-helpers')
-var auth = require('../auth/auth-helpers')
+var users = require('../users/user-helpers');
+var auth = require('../auth/auth-helpers');
 
 /* GET users listing. */
 
@@ -16,8 +16,10 @@ router.get('/:id', users.validateUser, auth.loginRequired, users.getUserName, us
     })
 })
 
-router.post('/:id/:category', users.deleteOldItems, users.submitItems, function(req, res, next) {
-    res.redirect('/users/' + req.params.id)
+router.get('/:id/edit/:item_id', auth.loginRequired, users.getOne, function(req, res.next) {
+    res.render('itemrevise', {
+        item: res.locals.item
+    })
 })
 
 router.put('/:id/:category', function(req, res, next) {
@@ -26,11 +28,15 @@ router.put('/:id/:category', function(req, res, next) {
     }, { where: { id: req.User.id } }).then(function() {
         res.redirect('/');
     });
-})
-module.exports = router;
+}) module.exports = router;
 
 
 //users/:id/edit/:item
 
 //get the item id and pass it through the request
 //a href = /req.params.userid/edit/ITEM ID
+router.post('/:id/:category', users.deleteOldItems, users.submitItems, function(req, res, next) {
+    res.redirect('/users/' + req.params.id)
+})
+
+module.exports = router;
