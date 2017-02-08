@@ -1,6 +1,6 @@
 
 ### REMINDR
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/remindr.gif)
+![remindr](https://cloud.githubusercontent.com/assets/20092259/22754748/99f6504e-ee0e-11e6-9ad4-5de9745ff341.gif)
 ##About:
 Our app aims to solve the problem of wasted consumption, that is we think of all the things we want to consume - movies, books, tv, video games, etc - but we end up defaulting to our go-tos when we actually have free time.  This app aims to make our consumption more productive, to actually remind us to try the new book or tv show we’ve been wanting to check out.
 
@@ -21,26 +21,25 @@ We will know this to be true when users are able to discover new media with out 
 
 ##Wireframe:
 
-![Alt text](/fosachiman/remindr/public/images/index.png?raw=true)
+![index](https://cloud.githubusercontent.com/assets/20092259/22754770/b197e37a-ee0e-11e6-993e-553a21950c55.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/register.png)
+![register](https://cloud.githubusercontent.com/assets/20092259/22754869/fa2d6786-ee0e-11e6-8f6c-59a72c785df4.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/redirect.png)
+![redirect](https://cloud.githubusercontent.com/assets/20092259/22754893/077dbc74-ee0f-11e6-9e25-96aa2f88ec06.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/userpage.png)
+![userpage](https://cloud.githubusercontent.com/assets/20092259/22754924/1bb9ab44-ee0f-11e6-8011-80443a5b1c8b.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/additem.png)
+![additem](https://cloud.githubusercontent.com/assets/20092259/22754948/2c10ddf0-ee0f-11e6-98bf-5a59fdc2ffb3.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/edititem.png)
+![edititem](https://cloud.githubusercontent.com/assets/20092259/22754963/3d086ccc-ee0f-11e6-8c96-f2c1514921e8.png)
 
+![editfield](https://cloud.githubusercontent.com/assets/20092259/22754975/47cffdb4-ee0f-11e6-82d9-3cb0c07e37b4.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/editfield.png)
+![delete](https://cloud.githubusercontent.com/assets/20092259/22754982/53c6f924-ee0f-11e6-98bb-8dd7087b39b0.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/delete.png)
+![changes](https://cloud.githubusercontent.com/assets/20092259/22755000/63b2f518-ee0f-11e6-875e-eb2ce7dbd9b2.png)
 
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/changes.png)
-
-![alt tag](https://raw.githubusercontent.com/fosachiman/remindr/public/images/submit.png)
+![submit](https://cloud.githubusercontent.com/assets/20092259/22755016/6e3f3f32-ee0f-11e6-8ce8-89f609709d55.png)
 
 ## Technologies Used:
 
