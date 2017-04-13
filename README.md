@@ -59,11 +59,5 @@ We will know this to be true when users are able to discover new media with out 
 Users will be able to suggest list items or non-list items pull in through api
 to friends in their friends circle.
 
-##Major Hurdles:
-
-- Getting auth login into function properly
-- Unclear Sequelize error messagaes
-- Time constraints
-- Project Management/Communication issues
 
 More info coming soon!
